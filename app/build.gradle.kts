@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.qq.qqpega"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.qq.qqpega"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -49,29 +49,11 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.play.services.location)
-    implementation(libs.play.services.maps)
-    implementation(libs.maps)
-    implementation(libs.androidx.navigation.compose.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
+    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-        //FireBase
-    implementation (platform(libs.firebase.bom))
-    implementation (libs.firebase.auth)
-    implementation (libs.androidx.navigation.compose)
-  
-    //Maps
-    implementation (libs.accompanist.permissions)
-
-    implementation(libs.maps.compose)
-
-    implementation (libs.volley)
-
-
 }
